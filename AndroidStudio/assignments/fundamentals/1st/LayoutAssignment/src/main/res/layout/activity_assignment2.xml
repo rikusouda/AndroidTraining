@@ -5,7 +5,7 @@
     tools:context=".Assignment2Activity" >
 
     <!-- このLinearLayoutをRelativeLayoutに変更して同じレイアウトを実現してください -->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#ffc356"
@@ -13,6 +13,7 @@
         android:padding="4dp" >
 
         <ImageView
+            android:id="@+id/icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="4dp"
@@ -22,7 +23,10 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_alignTop="@id/icon"
+            android:layout_alignBottom="@id/icon"
+            android:layout_toRightOf="@id/icon"
+            android:layout_alignParentRight="true"
             android:orientation="vertical" >
 
             <TextView
@@ -37,5 +41,5 @@
                 android:layout_weight="1"
                 android:background="#ffedc6" />
         </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
 </FrameLayout>
